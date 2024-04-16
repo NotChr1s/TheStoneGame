@@ -14,6 +14,7 @@ public class ToClosetWorld extends Button
      */
     public void act()
     {
-        // Add your action code here.
+        ClosetWorld world = new ClosetWorld();
+        Greenfoot.setWorld(world);
     }
 }
