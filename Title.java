@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ToInitialWorld here.
+ * Write a description of class Title here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ToInitialWorld extends Button
+public class Title extends Actor
 {
     /**
-     * Act - do whatever the ToInitialWorld wants to do. This method is called whenever
+     * Act - do whatever the Title wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
