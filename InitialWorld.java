@@ -22,19 +22,19 @@ public class InitialWorld extends World
     private void prepareButtons()
     {
         World world = new CombatWorld();
-        Button button1 = new Button("CombatButton.png","SelectedCombatButton.png",world);
+        Button button1 = new Button("CombatButton.png","SelectedCombatButton.png",world,"PresionedCombatButton.png");
         addObject(button1,540,350);
         World world2 = new ClosetWorld();
-        Button button2 = new Button("ClosetButton.png","SelectedClosetButton.png",world2);
+        Button button2 = new Button("ClosetButton.png","SelectedClosetButton.png",world2,"PresionedClosetButton.png");
         addObject(button2,270,550);
         World world3 = new ShopWorld();
-        Button button3 = new Button("ShopButton.png","SelectedShopButton.png",world3);
+        Button button3 = new Button("ShopButton.png","SelectedShopButton.png",world,"PresionedShopButton.png");
         addObject(button3,810,550);
         World world4 = new GachaWorld();
-        Button button4 = new Button("GachaButton.png","SelectedGachaButton.png",world4);
+        Button button4 = new Button("GachaButton.png","SelectedGachaButton.png",world4,"PresionedGachaButton.png");
         addObject(button4,540,600);
         World world5 = new CombatWorld();
-        Button button5 = new Button("SettingsButton.png","SelectedSettingsButton.png",world5);
+        Button button5 = new Button("SettingsButton.png","SelectedSettingsButton.png",world,"PresionedSettingsButton.png");
         addObject(button5,50,670);
     }
     

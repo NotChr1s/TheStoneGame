@@ -10,11 +10,13 @@ class Button extends Actor
 {
     private GreenfootImage imagenNormal;
     private GreenfootImage imagenSeleccion;
+    private GreenfootImage imagenPresionado;
     private World newWorld;
     
-    public Button(String imageButton, String imageSelectButton, World newWorld) {
+    public Button(String imageButton, String imageSelectButton, World newWorld, String imagePresionedButton) {
         imagenNormal = new GreenfootImage(imageButton);
         imagenSeleccion = new GreenfootImage(imageSelectButton);
+        imagenPresionado = new GreenfootImage(imagePresionedButton); 
         setImage(imagenNormal);
         this.newWorld= newWorld;
     }
@@ -22,6 +24,7 @@ class Button extends Actor
     public Button() {
         imagenNormal = new GreenfootImage("BasicButton.png");
         imagenSeleccion = new GreenfootImage("SelectedBasicButton.png");
+        imagenPresionado = new GreenfootImage("PresionedBasicButton.png");
         setImage(imagenNormal);
         this.newWorld= new InitialWorld();
     }
@@ -34,6 +37,9 @@ class Button extends Actor
             setImage(imagenNormal);  
         }
         if (Greenfoot.mouseClicked(this)) {
+            setImage(imagenPresionado);
+            Greenfoot.delay(7); 
+            setImage(imagenNormal);
             Greenfoot.setWorld(newWorld);
         }
     }
