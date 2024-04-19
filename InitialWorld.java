@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class InitialWorld extends World
 {
-
+    private static World world;
+    private GreenfootSound bgMusic;
     /**
      * Constructor for objects of class InitialWorld.
      * 
@@ -16,6 +17,8 @@ public class InitialWorld extends World
     public InitialWorld()
     {    
         super(1080, 720, 1); 
+        world = this;
+        bgMusic= new GreenfootSound("A game of rocks.mp3");
         prepare();
     }
     
@@ -33,8 +36,10 @@ public class InitialWorld extends World
         World world4 = new GachaWorld();
         Button button4 = new Button("GachaButton.png","SelectedGachaButton.png",world4,"PresionedGachaButton.png");
         addObject(button4,540,600);
-        World world5 = new CombatWorld();
-        Button button5 = new Button("SettingsButton.png","SelectedSettingsButton.png",world,"PresionedSettingsButton.png");
+        World world5 = new SettingsWorld();
+        Button button5 = new Button("SettingsButton.png","SelectedSettingsButton.png",world5,"PresionedSettingsButton.png");
+        GreenfootSound newSound = new GreenfootSound("ButtonSound2.wav");
+        button5.setSound(newSound);
         addObject(button5,50,670);
     }
     
@@ -42,8 +47,15 @@ public class InitialWorld extends World
     {
         GreenfootImage nuevaImagenFondo = new GreenfootImage("ProvisionalBG2.jpg");
         setBackground(nuevaImagenFondo);
-        GameTitle gametitle = new GameTitle();
-        addObject(gametitle,540,150);
+        Media title = new Media("Title.png");
+        addObject(title,540,150);
         prepareButtons();
+        if(!bgMusic.isPlaying()){
+            bgMusic.play();
+        }
+    }
+    
+        public static World getThisWorld(){
+        return world;
     }
 }

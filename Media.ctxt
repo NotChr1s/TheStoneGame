@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Media
+comment1.params=
+comment1.target=Media()
+comment2.params=media
+comment2.target=Media(java.lang.String)
+comment3.params=newImage
+comment3.target=void\ setMedia(greenfoot.GreenfootImage)
+numComments=4

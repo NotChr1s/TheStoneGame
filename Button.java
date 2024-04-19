@@ -12,6 +12,7 @@ class Button extends Actor
     private GreenfootImage imagenSeleccion;
     private GreenfootImage imagenPresionado;
     private World newWorld;
+    private GreenfootSound sonido;
     
     public Button(String imageButton, String imageSelectButton, World newWorld, String imagePresionedButton) {
         imagenNormal = new GreenfootImage(imageButton);
@@ -19,6 +20,7 @@ class Button extends Actor
         imagenPresionado = new GreenfootImage(imagePresionedButton); 
         setImage(imagenNormal);
         this.newWorld= newWorld;
+        sonido = new GreenfootSound("ButtonSound.wav");
     }
     
     public Button() {
@@ -27,6 +29,11 @@ class Button extends Actor
         imagenPresionado = new GreenfootImage("PresionedBasicButton.png");
         setImage(imagenNormal);
         this.newWorld= new InitialWorld();
+        sonido = new GreenfootSound("ButtonSound.wav");
+    }
+    
+    public void setSound(GreenfootSound newsound){
+        this.sonido=newsound;
     }
     
     public void act() {
@@ -40,6 +47,7 @@ class Button extends Actor
             setImage(imagenPresionado);
             Greenfoot.delay(7); 
             setImage(imagenNormal);
+            sonido.play();
             Greenfoot.setWorld(newWorld);
         }
     }
