@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GachaWorld extends World
+public class GachaWorld extends Game
 {
 
     /**
@@ -15,6 +15,8 @@ public class GachaWorld extends World
      */
     public GachaWorld()
     {    
-        super(1080, 720, 1); 
+        super(); 
     }
+    public void prepareButtons(){}
+    public void prepareMedia(){}
 }

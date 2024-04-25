@@ -6,52 +6,59 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class InitialWorld extends World
+public class InitialWorld extends Game
 {
     private static World world;
-    private GreenfootSound bgMusic;
     /**
      * Constructor for objects of class InitialWorld.
      * 
      */
     public InitialWorld()
     {    
-        super(1080, 720, 1); 
+        super(); 
         world = this;
-        bgMusic= new GreenfootSound("A game of rocks.mp3");
+        music= new GreenfootSound("A game of rocks.mp3");
         prepare();
     }
     
-    private void prepareButtons()
+    public void prepareButtons()
     {
         World world = new CombatWorld();
-        Button button1 = new Button("CombatButton.png","SelectedCombatButton.png",world,"PresionedCombatButton.png");
+        ToWorldButton button1 = new ToWorldButton("CombatButton.png","SelectedCombatButton.png",world,"PresionedCombatButton.png");
         addObject(button1,540,350);
-        World world2 = new ClosetWorld();
-        Button button2 = new Button("ClosetButton.png","SelectedClosetButton.png",world2,"PresionedClosetButton.png");
+        
+        world = new ClosetWorld();
+        ToWorldButton button2 = new ToWorldButton("ClosetButton.png","SelectedClosetButton.png",world,"PresionedClosetButton.png");
         addObject(button2,270,550);
-        World world3 = new ShopWorld();
-        Button button3 = new Button("ShopButton.png","SelectedShopButton.png",world,"PresionedShopButton.png");
+        
+        world = new ShopWorld();
+        ToWorldButton button3 = new ToWorldButton("ShopButton.png","SelectedShopButton.png",world,"PresionedShopButton.png");
         addObject(button3,810,550);
-        World world4 = new GachaWorld();
-        Button button4 = new Button("GachaButton.png","SelectedGachaButton.png",world4,"PresionedGachaButton.png");
+        
+        world = new GachaWorld();
+        ToWorldButton button4 = new ToWorldButton("GachaButton.png","SelectedGachaButton.png",world,"PresionedGachaButton.png");
         addObject(button4,540,600);
-        World world5 = new SettingsWorld();
-        Button button5 = new Button("SettingsButton.png","SelectedSettingsButton.png",world5,"PresionedSettingsButton.png");
+        
+        world = new SettingsWorld();
+        ToWorldButton button5 = new ToWorldButton("SettingsButton.png","SelectedSettingsButton.png",world,"PresionedSettingsButton.png");
         GreenfootSound newSound = new GreenfootSound("ButtonSound2.wav");
         button5.setSound(newSound);
         addObject(button5,50,670);
     }
     
-    private void prepare()
-    {
+    public void prepareMedia(){
         GreenfootImage nuevaImagenFondo = new GreenfootImage("ProvisionalBG2.jpg");
         setBackground(nuevaImagenFondo);
         Media title = new Media("Title.png");
         addObject(title,540,150);
+    }
+    
+    private void prepare()
+    {
+        prepareMedia();
         prepareButtons();
-        if(!bgMusic.isPlaying()){
-            bgMusic.play();
+        if(!music.isPlaying()){
+            music.play();
         }
     }
     

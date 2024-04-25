@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.GreenfootImage;
 
 public class Media extends Actor
 {
@@ -13,6 +14,12 @@ public class Media extends Actor
     public Media(String media)
     {
         image = new GreenfootImage(media);
+        setImage(image);
+    }
+    
+    public Media(GreenfootImage media)
+    {
+        this.image=media;
         setImage(image);
     }
     

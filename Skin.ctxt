@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Skin
+comment0.text=\n\ Write\ a\ description\ of\ class\ Skin\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Skin()
+comment2.params=id\ name\ rarity\ sprite
+comment2.target=Skin(long,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=long\ getId()
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment5.params=
+comment5.target=java.lang.String\ getRarity()
+comment6.params=
+comment6.target=greenfoot.GreenfootImage\ getSprite()
+comment7.params=
+comment7.target=java.lang.String\ getSpriteFile()
+numComments=8

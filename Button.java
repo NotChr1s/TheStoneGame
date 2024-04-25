@@ -6,50 +6,49 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-class Button extends Actor
+abstract class Button extends Actor
 {
-    private GreenfootImage imagenNormal;
-    private GreenfootImage imagenSeleccion;
-    private GreenfootImage imagenPresionado;
-    private World newWorld;
-    private GreenfootSound sonido;
+    private GreenfootImage normalImage;
+    private GreenfootImage selectImage;
+    private GreenfootImage presionedImage;
+    private GreenfootSound sound;
     
-    public Button(String imageButton, String imageSelectButton, World newWorld, String imagePresionedButton) {
-        imagenNormal = new GreenfootImage(imageButton);
-        imagenSeleccion = new GreenfootImage(imageSelectButton);
-        imagenPresionado = new GreenfootImage(imagePresionedButton); 
-        setImage(imagenNormal);
-        this.newWorld= newWorld;
-        sonido = new GreenfootSound("ButtonSound.wav");
+    protected Button(String imageButton, String imageSelectButton, String imagePresionedButton) {
+        normalImage = new GreenfootImage(imageButton);
+        selectImage = new GreenfootImage(imageSelectButton);
+        presionedImage = new GreenfootImage(imagePresionedButton); 
+        setImage(normalImage);
+        sound = new GreenfootSound("ButtonSound.wav");
     }
     
-    public Button() {
-        imagenNormal = new GreenfootImage("BasicButton.png");
-        imagenSeleccion = new GreenfootImage("SelectedBasicButton.png");
-        imagenPresionado = new GreenfootImage("PresionedBasicButton.png");
-        setImage(imagenNormal);
-        this.newWorld= new InitialWorld();
-        sonido = new GreenfootSound("ButtonSound.wav");
+    protected Button() {
+        normalImage = new GreenfootImage("BasicButton.png");
+        selectImage = new GreenfootImage("SelectedBasicButton.png");
+        presionedImage = new GreenfootImage("PresionedBasicButton.png");
+        setImage(normalImage);
+        sound = new GreenfootSound("ButtonSound.wav");
     }
     
     public void setSound(GreenfootSound newsound){
-        this.sonido=newsound;
+        this.sound=newsound;
     }
     
-    public void act() {
-        if (Greenfoot.mouseMoved(this)) {  
-            setImage(imagenSeleccion);  
-        } 
-        if (Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this)) {  
-            setImage(imagenNormal);  
-        }
-        if (Greenfoot.mouseClicked(this)) {
-            setImage(imagenPresionado);
-            Greenfoot.delay(7); 
-            setImage(imagenNormal);
-            sonido.play();
-            Greenfoot.setWorld(newWorld);
-        }
+    public GreenfootSound getSound(){
+        return this.sound;
     }
+    
+    public GreenfootImage getNormalImage(){
+        return this.normalImage;
+    }
+    
+    public GreenfootImage getSelectImage(){
+        return this.selectImage;
+    }
+    
+    public GreenfootImage getPresionedImage(){
+        return this.presionedImage;
+    }
+    
+    abstract void handleMouseClicks();
 }
 

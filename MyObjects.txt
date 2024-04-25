@@ -1,0 +1,5 @@
+3001,Potion,Heals yourself until 20% of your max hp,500,5,potion.png,house.png,
+3002,Big potion,Heals yourself until 50% of your max hp,1000,4,potion.png,house.png,
+3011,experiment,Heals yourself until 20% of your max hp,500,1,potion.png,house.png,
+3010,Potion,Heals yourself until 20% of your max hp,500,1,potion.png,house.png,
+3008,Potion,Heals yourself until 20% of your max hp,500,4,potion.png,house.png,
