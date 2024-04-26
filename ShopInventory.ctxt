@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=ShopInventory
+comment1.params=
+comment1.target=ShopInventory()
+comment2.params=lowerLimit\ topLimit
+comment2.target=ShopInventory(int,\ int)
+comment3.params=
+comment3.target=void\ fillInventory()
+comment4.params=
+comment4.target=int\ getInventorySize()
+comment5.params=
+comment5.target=int\ getInventoryLowerLimit()
+comment6.params=
+comment6.target=int\ getInventoryTopLimit()
+comment7.params=
+comment7.target=java.util.ArrayList\ getInventory()
+comment8.params=id
+comment8.target=java.lang.Object\ getOneElemenOfInventary(long)
+comment9.params=
+comment9.target=void\ saveMyShopObjects()
+numComments=10

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BuyShopButton
+comment0.text=\n\ Write\ a\ description\ of\ class\ BuyShopButton\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=imageButton\ imageSelectButton\ imagePresionedButton\ lowLimit\ topLimit\ id\ currentInventoryWorld
+comment1.target=BuyShopButton(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int,\ long,\ InventoryWorld)
+comment2.params=
+comment2.target=void\ handleMouseClicks()
+comment3.params=
+comment3.target=void\ act()
+numComments=4

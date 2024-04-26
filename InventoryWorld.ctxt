@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=InventoryWorld
+comment1.params=
+comment1.target=InventoryWorld()
+comment10.params=cost
+comment10.target=Media\ generateCost(int)
+comment11.params=
+comment11.target=ShopInventory\ getInventory()
+comment2.params=lowerLimit\ topLimit
+comment2.target=InventoryWorld(int,\ int)
+comment3.params=
+comment3.target=void\ prepare()
+comment4.params=
+comment4.target=void\ displayInventory()
+comment5.params=
+comment5.target=void\ prepareMedia()
+comment6.params=
+comment6.target=void\ displayPlayerGold()
+comment7.params=
+comment7.target=void\ prepareButtons()
+comment8.params=
+comment8.target=void\ prepareInventoryShopButtons()
+comment9.params=
+comment9.target=void\ prepareBuyShopButtons()
+numComments=12

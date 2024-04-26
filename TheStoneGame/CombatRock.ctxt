@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=CombatRock
+comment0.text=\n\ Write\ a\ description\ of\ class\ CombatRock\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=CombatRock()
+comment2.params=name\ skin\ attack\ defense\ evasion\ speed\ attack1\ attack2\ attack3\ attack4
+comment2.target=CombatRock(java.lang.String,\ greenfoot.GreenfootImage,\ int,\ int,\ int,\ int,\ Attack,\ Attack,\ Attack,\ Attack)
+numComments=3

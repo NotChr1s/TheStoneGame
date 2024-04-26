@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=BuyWolrd
+comment0.text=\n\ Write\ a\ description\ of\ class\ BuyWolrd\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=previusInventoryWolrd\ currentSelledObject
+comment1.target=BuyWolrd(InventoryWorld,\ long)
+comment10.params=
+comment10.target=InventoryWorld\ getPreviusInventoryWorld()
+comment2.params=
+comment2.target=void\ prepare()
+comment3.params=
+comment3.target=void\ sellTheObject()
+comment4.params=
+comment4.target=void\ prepareMedia()
+comment5.params=
+comment5.target=void\ prepareButtons()
+comment6.params=buy
+comment6.target=void\ generateBuyInfo(java.lang.Object)
+comment7.params=obj
+comment7.target=Media\ generateObjectAmount(java.lang.Object)
+comment8.params=amount
+comment8.target=Media\ generateMyAmountBuy(int)
+comment9.params=name
+comment9.target=Media\ generateBuyName(java.lang.String)
+numComments=11

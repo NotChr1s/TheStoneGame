@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Rock
+comment0.text=\n\ Write\ a\ description\ of\ class\ Rock\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Rock()
+comment2.params=attack\ defense\ evasion\ speed\ attack1\ attack2\ attack3\ attack4
+comment2.target=Rock(int,\ int,\ int,\ int,\ Attack,\ Attack,\ Attack,\ Attack)
+numComments=3
