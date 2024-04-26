@@ -1,8 +1,10 @@
 #Greenfoot project file
+class.BuyWolrd.image=ScreenShop.jpg
 class.ClosetWorld.image=bathroom-tile.jpg
 class.CombatWorld.image=brick.jpg
 class.GachaWorld.image=sand2.jpg
 class.InitialWorld.image=space.jpg
+class.InventoryWorld.image=ScreenShop.jpg
 class.SettingsWorld.image=SettingslBG3.png
 class.ShopWorld.image=space1.jpg
 dependency1.from=Game
@@ -140,10 +142,10 @@ dependency8.type=UsesDependency
 dependency9.from=InventoryWorld
 dependency9.to=ShopInventory
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=1096
+editor.fx.0.width=1936
+editor.fx.0.x=53
+editor.fx.0.y=162
 height=1096
 package.numDependencies=45
 package.numTargets=25

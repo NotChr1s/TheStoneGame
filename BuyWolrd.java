@@ -64,7 +64,7 @@ public class BuyWolrd extends ShopWorld
     }
     
     public void prepareMedia(){
-        Media buyWindow = new Media("SettingsBanner.png");
+        Media buyWindow = new Media("WindowsShop.png");
         addObject(buyWindow,540,360);
         
         Object selledObject = inventory.getOneElemenOfInventary(this.currentSelledObject);
@@ -74,12 +74,12 @@ public class BuyWolrd extends ShopWorld
     public void prepareButtons(){
         if(player.getGold()<getObjectCost()){
             ToWorldButton back = new ToWorldButton("BackButtonSettings.png","SelectedBackButtonSettings.png",this.previusInventoryWolrd,"PresionedBackButtonSettings.png");
-            addObject(back,540,550);
+            addObject(back,540,480);
         }else{
             ToWorldButton back = new ToWorldButton("BackButtonSettings.png","SelectedBackButtonSettings.png",this.previusInventoryWolrd,"PresionedBackButtonSettings.png");
-            addObject(back,425,550);
-            BuyButton buy = new BuyButton("ApplyButtonSettings.png","SelectedApplyButtonSettings.png",this,"PresionedApplyButtonSettings.png");
-            addObject(buy,625,550);
+            addObject(back,300,490);
+            BuyButton buy = new BuyButton("BuyButton.png","SelectedBuyButton.png",this,"PresionedBuyButton.png");
+            addObject(buy,760,480);
         }
     }
     
@@ -102,10 +102,10 @@ public class BuyWolrd extends ShopWorld
             Media buyAmount = generateMyAmountBuy(player.getObjectAmount((((GameObject)(buy)).getId())));
             Media objectAmount = generateObjectAmount(buy);
             generateGoldAndObjectCost(((GameObject)(buy)).getCost());
-            addObject(buyName,580,150);
-            addObject(buySprite,540,250);
-            addObject(buyAmount,580,370);
-            addObject(objectAmount,580,390);
+            addObject(buyName,560,150);
+            addObject(buySprite,360,260);
+            addObject(buyAmount,570,370);
+            addObject(objectAmount,660,390);
         } 
         if(buy instanceof Attack){
             String buySpriteFile = ((Attack)(buy)).getSpriteFile();
@@ -114,41 +114,41 @@ public class BuyWolrd extends ShopWorld
             Media buyAmount = generateMyAmountBuy(player.getObjectAmount((((Attack)(buy)).getId())));
             Media objectAmount = generateObjectAmount(buy);
             generateGoldAndObjectCost(((Attack)(buy)).getCost());
-            addObject(buyName,580,150);
-            addObject(buySprite,540,250);
-            addObject(buyAmount,580,370);
-            addObject(objectAmount,580,390);
+            addObject(buyName,560,150);
+            addObject(buySprite,360,260);
+            addObject(buyAmount,570,370);
+            addObject(objectAmount,660,390);
         } 
     }
     
     public void generateGoldAndObjectCost(int objectCost){
-         GreenfootImage image = new GreenfootImage(150, 50);  
+         GreenfootImage image = new GreenfootImage(200, 50);  
         Font font = new Font("Press Start 2P", 18);  
         image.setFont(font);
-        image.setColor(Color.ORANGE);  
+        image.setColor(Color.BLACK);  
         image.drawString("" +objectCost + " / ", 20, 30);  
         Media objectCostMedia = new Media(image);
         
         int playerGold = player.getGold();
-        GreenfootImage image2 = new GreenfootImage(100, 50);  
+        GreenfootImage image2 = new GreenfootImage(200, 50);  
         Font font2 = new Font("Press Start 2P", 18);  
         image2.setFont(font2);
         if(playerGold<objectCost){
             image2.setColor(Color.RED);  
         }else{
-            image2.setColor(Color.ORANGE);  
+            image2.setColor(Color.BLACK);  
         }
         image2.drawString("" +playerGold, 20, 30);  
         Media playerGoldMedia = new Media(image2);
         
-        addObject(playerGoldMedia,680,450);
-        addObject(objectCostMedia,560,450);
+        addObject(playerGoldMedia,630,470);
+        addObject(objectCostMedia,510,470);
     }
         
     public Media generateObjectAmount(Object obj){
         if(obj instanceof GameObject){
             int amount = ((GameObject)(obj)).getAmount();
-            GreenfootImage image = new GreenfootImage(200, 50);  
+            GreenfootImage image = new GreenfootImage(400, 50);  
             Font font = new Font("Arial", 18);  
             image.setFont(font);  
             image.setColor(Color.WHITE);  
@@ -180,10 +180,10 @@ public class BuyWolrd extends ShopWorld
     }
     
     public Media generateBuyName(String name){
-        GreenfootImage image = new GreenfootImage(200, 50);  
+        GreenfootImage image = new GreenfootImage(500, 50);  
         Font font = new Font("Press Start 2P", 24);  
         image.setFont(font);  
-        image.setColor(Color.YELLOW);  
+        image.setColor(Color.WHITE);  
         image.drawString(name, 20, 30);  
         Media buy = new Media(image);
         return buy;

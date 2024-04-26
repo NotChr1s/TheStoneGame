@@ -77,19 +77,19 @@ public class InventoryWorld extends ShopWorld
                     int cost = ((GameObject)(unit)).getCost();
                     Media objectCost = generateCost(cost);
                     if(j<=3){
-                        addObject(button,((j-1)*300)+250,200);
-                        addObject(objectCost,((j-1)*300)+250,320);
+                        addObject(button,((j-1)*225)+290,450);
+                        addObject(objectCost,((j-1)*225)+290,510);
                     }else{
-                        addObject(button,((j-4)*300)+250,500);
-                        addObject(objectCost,((j-4)*300)+250,620);
+                        addObject(button,((j-4)*225)+290,590);
+                        addObject(objectCost,((j-4)*225)+290,650);
                     }
                 }else{
                     String silhouetteSpriteFile = ((GameObject)(unit)).getSilhouetteSpriteFile();
                     Media silhouette = new Media(silhouetteSpriteFile);
                     if(j<=3){
-                        addObject(silhouette,((j-1)*300)+250,200);
+                        addObject(silhouette,((j-1)*225)+290,450);
                     }else{
-                        addObject(silhouette,((j-4)*300)+250,500);
+                        addObject(silhouette,((j-4)*225)+290,590);
                     }
                 }
             }
