@@ -1,11 +1,5 @@
 import greenfoot.GreenfootImage;
 
-/**
- * Write a description of class GameObject here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class GameObject  
 {
     // instance variables - replace the example below with your own

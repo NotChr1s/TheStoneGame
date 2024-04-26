@@ -55,7 +55,7 @@ public class FileArrayManager
         }
     }
     
-    public ArrayList<Attack> readArraylistAttack (String fileName){
+    public ArrayList<Attack> readArraylistAttack(String fileName){
         ArrayList<Attack> attacks = new ArrayList<Attack>();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -67,8 +67,10 @@ public class FileArrayManager
                 String description = attributes[2];
                 String category = attributes[3];
                 int cost = Integer.parseInt(attributes[4]);
-                String fileSprite = attributes[5]; 
-                Attack attack = new Attack(id, name, description, category, cost, fileSprite);
+                int amount = Integer.parseInt(attributes[5]);
+                String fileSprite = attributes[6]; 
+                String silhouetteFileSprite = attributes[7]; 
+                Attack attack = new Attack(id, name, description, category, cost, amount,fileSprite, silhouetteFileSprite);
                 attacks.add(attack);
             }
             reader.close();
@@ -82,7 +84,7 @@ public class FileArrayManager
         try {
             BufferedWriter writter = new BufferedWriter(new FileWriter(fileName));
             for (Attack attack : attacks) {
-                String save = attack.getId() + "," + attack.getName() + "," + attack.getDescription() + "," + attack.getCategory() + "," + attack.getCost() + "," +attack.getSpriteFile();
+                String save = attack.getId() + "," + attack.getName() + "," + attack.getDescription() + "," + attack.getCategory() + "," + attack.getCost() + "," + attack.getAmount() + "," +attack.getSpriteFile() + "," +attack.getSilhouetteSpriteFile() +",";
                 writter.write(save);
                 writter.newLine(); 
             }
@@ -129,4 +131,5 @@ public class FileArrayManager
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
+    
 }

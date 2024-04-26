@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Rock  
 {
-    // instance variables - replace the example below with your own
+    private int life;
     private int attack;
     private int defense;
     private int evasion;
@@ -23,7 +23,7 @@ public class Rock
     {
     }
     
-    public Rock(int attack, int defense, int evasion, int speed, Attack attack1, Attack attack2, Attack attack3, Attack attack4)
+    public Rock(int life, int attack, int defense, int evasion, int speed, Attack attack1, Attack attack2, Attack attack3, Attack attack4)
     {
         this.attack=attack;
         this.defense=defense;

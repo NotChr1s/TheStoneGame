@@ -4,7 +4,7 @@ public class ShopInventory
 {
     private int lowerLimit;
     private int topLimit;
-    private ArrayList<Attack> shopattacks;
+    private ArrayList<Attack> shopAttacks;
     private ArrayList<GameObject> shopObjects;
     private ArrayList<Object> inventory;
     private FileArrayManager fileManager;
@@ -17,6 +17,7 @@ public class ShopInventory
         inventory = new ArrayList<Object>();
         fileManager = new FileArrayManager();
         shopObjects=fileManager.readArraylistObject("ShopObjects.txt");
+        shopAttacks =fileManager.readArraylistAttack("ShopAttacks.txt");
         fillInventory();
     }
     
@@ -28,12 +29,17 @@ public class ShopInventory
         inventory = new ArrayList<Object>();
         fileManager = new FileArrayManager();
         shopObjects=fileManager.readArraylistObject("ShopObjects.txt");
+        shopAttacks =fileManager.readArraylistAttack("ShopAttacks.txt");
         fillInventory();
     }
     
     private void fillInventory(){
         for(GameObject object: shopObjects){
             Object inventoryUnit = object;
+            inventory.add(inventoryUnit);
+        }
+        for(Attack attack: shopAttacks){
+            Object inventoryUnit = attack;
             inventory.add(inventoryUnit);
         }
     }
@@ -61,11 +67,20 @@ public class ShopInventory
                     return unit;
                 }
             }
+            if(unit instanceof Attack){
+                if(((Attack)(unit)).getId()==id){
+                    return unit;
+                }
+            }
         }
         return null;
     }
     
     public void saveMyShopObjects(){
         fileManager.saveArraylistObject("ShopObjects.txt",shopObjects);
+    }
+    
+    public void saveMyShopAttacks(){
+        fileManager.saveArraylistAttack("ShopAttacks.txt",shopAttacks);
     }
 }

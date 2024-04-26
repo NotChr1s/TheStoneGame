@@ -1,0 +1,4 @@
+2001,Spear,The user dashes towards the target dealing a small amount of damage,impact,0,fragmentation.png,attackSilhouette.png,
+2002,Mineral wear,Use rock energy to erode and decrease enemy attack by 5%,efect,0,rockhail.png,attackSilhouette.png,
+2003,Granite blow,Channel the force of the rock to unleash a light damaging blow,impact,0,arcaneerosion.png,attackSilhouette.png,
+2004,Stone spikes,Summons sharp spikes of rock that emerge from the ground to pierce 5% of the enemy's maximum health for 5 turns,reagent,0,deadlyslide.png,attackSilhouette.png,

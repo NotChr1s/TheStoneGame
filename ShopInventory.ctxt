@@ -2,6 +2,8 @@
 comment0.target=ShopInventory
 comment1.params=
 comment1.target=ShopInventory()
+comment10.params=
+comment10.target=void\ saveMyShopAttacks()
 comment2.params=lowerLimit\ topLimit
 comment2.target=ShopInventory(int,\ int)
 comment3.params=
@@ -18,4 +20,4 @@ comment8.params=id
 comment8.target=java.lang.Object\ getOneElemenOfInventary(long)
 comment9.params=
 comment9.target=void\ saveMyShopObjects()
-numComments=10
+numComments=11

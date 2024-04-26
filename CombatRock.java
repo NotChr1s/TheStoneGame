@@ -18,9 +18,9 @@ public class CombatRock extends Rock
     {
     }
     
-    public CombatRock(String name, GreenfootImage skin, int attack, int defense, int evasion, int speed, Attack attack1, Attack attack2, Attack attack3, Attack attack4)
+    public CombatRock(int life, String name, GreenfootImage skin, int attack, int defense, int evasion, int speed, Attack attack1, Attack attack2, Attack attack3, Attack attack4)
     {
-        super(attack,defense,evasion,speed,attack1,attack2,attack3,attack4);
+        super(life, attack,defense,evasion,speed,attack1,attack2,attack3,attack4);
         this.name=name;
         this.skin=skin;
         this.objects= new ArrayList<GameObject>();

@@ -43,6 +43,24 @@ public class BuyWolrd extends ShopWorld
             player.saveMyData();
             inventory.saveMyShopObjects();
         }
+        if(selledObject instanceof Attack){
+            ((Attack)(selledObject)).decreasesAmount();
+            long id=((Attack)(selledObject)).getId();
+            String name = ((Attack)(selledObject)).getName();
+            String description = ((Attack)(selledObject)).getDescription();
+            int amount=1;
+            String sprite= ((Attack)(selledObject)).getSpriteFile();
+            String category = ((Attack)(selledObject)).getCategory();
+            int cost = ((Attack)(selledObject)).getCost();
+            String silhouetteSprite = ((Attack)(selledObject)).getSilhouetteSpriteFile();
+            Attack object = new Attack(id,name,description,category,cost,amount,sprite,silhouetteSprite);
+            player.addObjectToMyAttacks(object);
+            int newGold = player.getGold() - ((Attack)(selledObject)).getCost();
+            player.setGold(newGold);
+            player.saveMyAttacksArrayList();
+            player.saveMyData();
+            inventory.saveMyShopAttacks();
+        }
     }
     
     public void prepareMedia(){
@@ -70,6 +88,9 @@ public class BuyWolrd extends ShopWorld
         if(selledObject instanceof GameObject){
             return ((GameObject)(selledObject)).getCost();
         }
+        if(selledObject instanceof Attack){
+            return ((Attack)(selledObject)).getCost();
+        }
         return 0;
     }
     
@@ -81,6 +102,18 @@ public class BuyWolrd extends ShopWorld
             Media buyAmount = generateMyAmountBuy(player.getObjectAmount((((GameObject)(buy)).getId())));
             Media objectAmount = generateObjectAmount(buy);
             generateGoldAndObjectCost(((GameObject)(buy)).getCost());
+            addObject(buyName,580,150);
+            addObject(buySprite,540,250);
+            addObject(buyAmount,580,370);
+            addObject(objectAmount,580,390);
+        } 
+        if(buy instanceof Attack){
+            String buySpriteFile = ((Attack)(buy)).getSpriteFile();
+            Media buySprite = new Media(buySpriteFile);
+            Media buyName = generateBuyName(((Attack)(buy)).getName());
+            Media buyAmount = generateMyAmountBuy(player.getObjectAmount((((Attack)(buy)).getId())));
+            Media objectAmount = generateObjectAmount(buy);
+            generateGoldAndObjectCost(((Attack)(buy)).getCost());
             addObject(buyName,580,150);
             addObject(buySprite,540,250);
             addObject(buyAmount,580,370);
@@ -115,6 +148,16 @@ public class BuyWolrd extends ShopWorld
     public Media generateObjectAmount(Object obj){
         if(obj instanceof GameObject){
             int amount = ((GameObject)(obj)).getAmount();
+            GreenfootImage image = new GreenfootImage(200, 50);  
+            Font font = new Font("Arial", 18);  
+            image.setFont(font);  
+            image.setColor(Color.WHITE);  
+            image.drawString("Available: " + amount, 20, 30);  
+            Media amountObject = new Media(image);
+            return amountObject;
+        }
+        if(obj instanceof Attack){
+            int amount = ((Attack)(obj)).getAmount();
             GreenfootImage image = new GreenfootImage(200, 50);  
             Font font = new Font("Arial", 18);  
             image.setFont(font);  

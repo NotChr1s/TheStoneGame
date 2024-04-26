@@ -39,6 +39,7 @@ public class Player
         fileManager = new FileArrayManager();
         skins=fileManager.readArraylistSkin("MySkins.txt");
         objects=fileManager.readArraylistObject("MyObjects.txt");
+        attacks = fileManager.readArraylistAttack("MyAttacks.txt");
     }
     
     private void readFileData(String fileName){
@@ -133,6 +134,10 @@ public class Player
         objects.add(newObject);
     }
     
+    public void addObjectToMyAttacks(Attack newAttack){
+        attacks.add(newAttack);
+    }
+    
     public boolean searchObject(long id){
         for(GameObject object: objects){
             if(object.getId()==id){
@@ -156,4 +161,9 @@ public class Player
     public void saveMyObjectsArrayList(){
         fileManager.saveArraylistObject("MyObjects.txt",objects);
     }
+    
+    public void saveMyAttacksArrayList(){
+        fileManager.saveArraylistAttack("MyAttacks.txt",attacks);
+    }
+    
 }

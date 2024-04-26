@@ -1,11 +1,5 @@
 import greenfoot.GreenfootImage;
 
-/**
- * Write a description of class Attack here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Attack  
 {
     // instance variables - replace the example below with your own
@@ -14,28 +8,35 @@ public class Attack
     private String description;
     private String category;
     private int cost;
+    private int amount;
     private GreenfootImage sprite;
     private String spriteFile;
+    private GreenfootImage silhouetteSprite;
+    private String silhouetteSpriteFile;
     
-    /**
-     * Constructor for objects of class Attack
-     */
     public Attack()
     {
     }
 
-    public Attack(long id, String name, String description, String category, int cost, String sprite)
+    public Attack(long id, String name, String description, String category, int cost, int amount,String sprite, String silhouette)
     {
         this.id=id;
         this.name=name;
         this.description=description;
         this.cost=cost;
+        this.amount = amount;
         this.sprite=new GreenfootImage(sprite);
         this.spriteFile=sprite;
+        this.silhouetteSprite= new GreenfootImage(silhouette);
+        this.silhouetteSpriteFile=silhouette;
     }
     
     public long getId() {
         return id;
+    }
+    
+    public int getAmount() {
+        return amount;
     }
 
     public String getName() {
@@ -60,5 +61,17 @@ public class Attack
 
     public String getSpriteFile() {
         return spriteFile;
+    }
+    
+    public GreenfootImage getSilhouetteSprite() {
+        return silhouetteSprite;
+    }
+
+    public String getSilhouetteSpriteFile() {
+        return silhouetteSpriteFile;
+    }
+    
+    public void decreasesAmount() {
+        this.amount--;
     }
 }

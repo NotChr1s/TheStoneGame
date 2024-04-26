@@ -93,6 +93,30 @@ public class InventoryWorld extends ShopWorld
                     }
                 }
             }
+            if(unit instanceof Attack){
+                if(((Attack)(unit)).getAmount()>0){
+                    String spriteFile = ((Attack)(unit)).getSpriteFile();
+                    long objectId = ((Attack)(unit)).getId();
+                    BuyShopButton button = new BuyShopButton(spriteFile,spriteFile,spriteFile,inventoryLowLimit,inventoryTopLimit,objectId,this);
+                    int cost = ((Attack)(unit)).getCost();
+                    Media objectCost = generateCost(cost);
+                    if(j<=3){
+                        addObject(button,((j-1)*300)+250,200);
+                        addObject(objectCost,((j-1)*300)+250,320);
+                    }else{
+                        addObject(button,((j-4)*300)+250,500);
+                        addObject(objectCost,((j-4)*300)+250,620);
+                    }
+                }else{
+                    String silhouetteSpriteFile = ((Attack)(unit)).getSilhouetteSpriteFile();
+                    Media silhouette = new Media(silhouetteSpriteFile);
+                    if(j<=3){
+                        addObject(silhouette,((j-1)*300)+250,200);
+                    }else{
+                        addObject(silhouette,((j-4)*300)+250,500);
+                    }
+                }
+            }
             j++;
         }
     }   
