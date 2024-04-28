@@ -74,7 +74,7 @@ public class BuyWolrd extends ShopWorld
     public void prepareButtons(){
         if(player.getGold()<getObjectCost()){
             ToWorldButton back = new ToWorldButton("BackButtonSettings.png","SelectedBackButtonSettings.png",this.previusInventoryWolrd,"PresionedBackButtonSettings.png");
-            addObject(back,540,480);
+            addObject(back,300,490);
         }else{
             ToWorldButton back = new ToWorldButton("BackButtonSettings.png","SelectedBackButtonSettings.png",this.previusInventoryWolrd,"PresionedBackButtonSettings.png");
             addObject(back,300,490);
@@ -115,9 +115,9 @@ public class BuyWolrd extends ShopWorld
             Media objectAmount = generateObjectAmount(buy);
             generateGoldAndObjectCost(((Attack)(buy)).getCost());
             addObject(buyName,560,150);
-            addObject(buySprite,360,260);
+            addObject(buySprite,360,270);
             addObject(buyAmount,570,370);
-            addObject(objectAmount,660,390);
+            addObject(objectAmount,570,390);
         } 
     }
     

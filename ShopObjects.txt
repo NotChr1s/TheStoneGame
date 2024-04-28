@@ -1,4 +1,4 @@
-3001,Potion,Heals yourself until 20% of your max hp,500,999,potionShop.png,potionSilhouetteShop.png,
+3001,Potion,Heals yourself until 20% of your max hp,500,998,potionShop.png,potionSilhouetteShop.png,
 3002,Big potion,Heals yourself until 50% of your max hp,1000,998,potionShop.png,potionSilhouetteShop.png,
 3003,Magic potion,Heals all your hp,2000,999,magicPotionShop.png,potionSilhouetteShop.png,
 3004,Oil,Increases your speed until 40%,600,999,oilShop.png,oilSilhouetteShop.png,
