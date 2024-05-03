@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=MySkinsWorld
+comment1.params=
+comment1.target=MySkinsWorld()
+comment2.params=lowerLimit\ topLimit
+comment2.target=MySkinsWorld(int,\ int)
+comment3.params=
+comment3.target=void\ prepare()
+comment4.params=
+comment4.target=void\ prepareMedia()
+comment5.params=
+comment5.target=void\ prepareButtons()
+comment6.params=
+comment6.target=void\ prepareScrollButtons()
+comment7.params=
+comment7.target=void\ prepareSkins()
+numComments=8

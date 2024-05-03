@@ -27,8 +27,7 @@ public class InitialWorld extends Game
         ToWorldButton button1 = new ToWorldButton("CombatButton.png","SelectedCombatButton.png",world,"PresionedCombatButton.png");
         addObject(button1,540,350);
         
-        world = new ClosetWorld();
-        ToWorldButton button2 = new ToWorldButton("ClosetButton.png","SelectedClosetButton.png",world,"PresionedClosetButton.png");
+        ToClosetButton button2 = new ToClosetButton("ClosetButton.png","SelectedClosetButton.png","PresionedClosetButton.png");
         addObject(button2,270,550);
         
         world = new InventoryWorld();
@@ -62,7 +61,7 @@ public class InitialWorld extends Game
         }
     }
     
-        public static World getThisWorld(){
+    public static World getThisWorld(){
         return world;
     }
 }

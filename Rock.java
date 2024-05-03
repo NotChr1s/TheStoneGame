@@ -14,25 +14,64 @@ public class Rock
     private int defense;
     private int evasion;
     private int speed;
-    private Attack attack1;
-    private Attack attack2;
-    private Attack attack3;
-    private Attack attack4;
+    private ArrayList<Attack> attacks;
     
     public Rock()
     {
+        
     }
     
-    public Rock(int life, int attack, int defense, int evasion, int speed, Attack attack1, Attack attack2, Attack attack3, Attack attack4)
+    public Rock(int life, int attack, int defense, int evasion, int speed, ArrayList<Attack> attacks)
     {
+        this.life=life;
         this.attack=attack;
         this.defense=defense;
         this.evasion=evasion;
         this.speed=speed;
-        this.attack1=attack1;
-        this.attack2=attack2;
-        this.attack3=attack3;
-        this.attack4=attack4;
+        this.attacks= attacks;
     }
-
+    
+    public  int getLife(){
+        return this.life;
+    }
+    
+    public  int getAttack(){
+        return this.attack;
+    }
+    
+    public  int getDefense(){
+        return this.defense;
+    }
+    
+    public  int getSpeed(){
+        return this.speed;
+    }
+    
+    public  int getEvasion(){
+        return this.evasion;
+    }
+    
+    public  ArrayList<Attack> getAttacks(){
+        return this.attacks;
+    }
+    
+    public void serLife(int life){
+        this.life=life;
+    }
+    
+    public void setAttack(int attack){
+        this.attack=attack;
+    }
+    
+    public void setDefense(int defense){
+        this.defense=defense;
+    }
+    
+    public void setSpeed(int speed){
+        this.speed=speed;
+    }
+    
+    public void setEvasion(int evasion){
+        this.evasion=evasion;
+    }
 }    

@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 abstract class ShopButton extends Button
 {
-    
     private int lowLimit;
     private int topLimit;
     

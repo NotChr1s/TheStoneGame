@@ -6,12 +6,6 @@ import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
-/**
- * Write a description of class Player here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Player  
 {
     private String name;
@@ -26,20 +20,19 @@ public class Player
     private ArrayList<GameObject> objects;
     private Rock rock;
     private FileArrayManager fileManager;
-    /**
-     * Constructor for objects of class Player
-     */
+    
     public Player()
     {
         readFileData("playerData.txt");
         readCurrentSkin("CurrentSkin.txt");
-        skins = new ArrayList<Skin>();
-        attacks = new ArrayList<Attack>();
-        objects = new ArrayList<GameObject>();
-        fileManager = new FileArrayManager();
-        skins=fileManager.readArraylistSkin("MySkins.txt");
-        objects=fileManager.readArraylistObject("MyObjects.txt");
-        attacks = fileManager.readArraylistAttack("MyAttacks.txt");
+        this.skins = new ArrayList<Skin>();
+        this.attacks = new ArrayList<Attack>();
+        this.objects = new ArrayList<GameObject>();
+        this.fileManager = new FileArrayManager();
+        this.skins=fileManager.readArraylistSkin("MySkins.txt");
+        this.objects=fileManager.readArraylistObject("MyObjects.txt");
+        this.attacks = fileManager.readArraylistAttack("MyAttacks.txt");
+        this.rock=readRockData();
     }
     
     private void readFileData(String fileName){
@@ -60,6 +53,34 @@ public class Player
             System.out.println("Error al leer el archivo: " + e.getMessage());
         }
     }
+    
+    private Rock readRockData(){
+        ArrayList<Attack> attacks = fileManager.readArraylistAttack("MyRockAttacks.txt");
+        int life=0;
+        int attack=0;
+        int defense=0;
+        int speed=0;
+        int evasion=0;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("Myatributtes.txt"));
+            String line;
+            
+            while ((line = reader.readLine()) != null) {
+                String[] attributes = line.split(",");
+                life = Integer.parseInt(attributes[0]);
+                attack = Integer.parseInt(attributes[1]);
+                defense = Integer.parseInt(attributes[2]);
+                speed =Integer.parseInt(attributes[3]);
+                evasion = Integer.parseInt(attributes[4]);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo: " + e.getMessage());
+        }
+        Rock newRock = new Rock(life,attack,defense,evasion,speed,attacks);
+        return newRock;
+    }
+    
     
     public void saveMyData(){
         saveDataPlayer("playerData.txt");
@@ -119,10 +140,13 @@ public class Player
         this.gold=newGold;
     }
     
+    public Rock getRock(){
+        return this.rock;
+    }
+    
     public ArrayList<GameObject> getMyObjects(){
         return this.objects;
     }
-    
     
     public void addObjectToMyObjects(GameObject newObject){
         for(GameObject object : objects){
@@ -166,4 +190,25 @@ public class Player
         fileManager.saveArraylistAttack("MyAttacks.txt",attacks);
     }
     
-}
+    public String getName(){
+        return this.name;
+    }
+    
+    public ArrayList<Skin> getSkins(){
+        return this.skins;
+    }
+    
+    public Skin getOneSkin(long id){
+        for(Skin skin: skins){
+            if(skin.getId()==id){
+                return skin;
+            }
+        }
+        return null;
+    }
+    
+    public void setCurrentSkin(Skin newCurrentSkin){
+        this.currentSkin= newCurrentSkin;
+    }
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

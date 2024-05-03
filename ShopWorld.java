@@ -14,6 +14,5 @@ abstract class ShopWorld extends Game
     {    
         super(); 
         this.inventory = new ShopInventory(lowerLimit, topLimit);
-        
     }
 }

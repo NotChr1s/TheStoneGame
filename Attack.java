@@ -23,6 +23,7 @@ public class Attack
         this.id=id;
         this.name=name;
         this.description=description;
+        this.category=category;
         this.cost=cost;
         this.amount = amount;
         this.sprite=new GreenfootImage(sprite);

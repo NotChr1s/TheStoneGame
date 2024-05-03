@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SelectedSkinButton
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ SelectedSkinButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=imageButton\ imageSelectButton\ imagePresionedButton\ id\ currentMySkinsWorld
+comment1.target=SelectedSkinButton(java.lang.String,\ java.lang.String,\ java.lang.String,\ long,\ MySkinsWorld)
+comment2.params=
+comment2.target=void\ handleMouseClicks()
+comment3.params=
+comment3.target=void\ act()
+numComments=4

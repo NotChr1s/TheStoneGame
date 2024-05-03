@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=BelongingsWorld
+comment1.params=
+comment1.target=BelongingsWorld()
+comment2.params=lowLimit\ topLimit
+comment2.target=BelongingsWorld(int,\ int)
+comment3.params=
+comment3.target=int\ getInventoryLowerLimit()
+comment4.params=
+comment4.target=int\ getInventoryTopLimit()
+comment5.params=l
+comment5.target=void\ setLowerLimit(int)
+comment6.params=t
+comment6.target=void\ setTopLimit(int)
+comment7.params=
+comment7.target=void\ prepareScrollButtons()
+numComments=8

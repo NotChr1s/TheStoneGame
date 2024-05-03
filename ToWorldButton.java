@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.Actor;
 
 /**
  * Write a description of class ToWorldButton here.
@@ -18,6 +19,11 @@ public class ToWorldButton extends Button
     protected ToWorldButton(String imageButton, String imageSelectButton, World newWorld, String imagePresionedButton) {
         super(imageButton, imageSelectButton, imagePresionedButton);
         this.newWorld=newWorld;
+    }
+    
+    protected ToWorldButton(String imageButton, String imageSelectButton,String imagePresionedButton) {
+        super(imageButton, imageSelectButton, imagePresionedButton);
+        newWorld = new InitialWorld();
     }
     
     public void handleMouseClicks(){

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=MyAttacksWorld
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyAttacksWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=id
+comment1.target=MyAttacksWorld(long)
+comment2.params=lowerLimit\ topLimit
+comment2.target=MyAttacksWorld(int,\ int)
+comment3.params=
+comment3.target=void\ prepare()
+comment4.params=
+comment4.target=void\ prepareMedia()
+comment5.params=
+comment5.target=void\ prepareButtons()
+comment6.params=
+comment6.target=void\ prepareScrollButtons()
+comment7.params=
+comment7.target=void\ prepareSkins()
+numComments=8

@@ -5,6 +5,7 @@ public class InventoryWorld extends ShopWorld
     public InventoryWorld()
     {    
         super(); 
+        
         prepare();
     }
     public InventoryWorld(int lowerLimit, int topLimit)
@@ -42,6 +43,10 @@ public class InventoryWorld extends ShopWorld
     public void prepareButtons(){
         prepareInventoryShopButtons();
         prepareBuyShopButtons();
+        World initialWorld = InitialWorld.getThisWorld();
+        // Crear el botón con la referencia al mundo actual
+        ToWorldButton universalBack = new ToWorldButton("UniversalBackButton.png","UniversalBackButton.png",initialWorld,"UniversalBackButtonPresioned.png");
+        addObject(universalBack,70,660);
     }
     
     public void prepareInventoryShopButtons(){

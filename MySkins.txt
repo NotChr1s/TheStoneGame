@@ -1,2 +1,6 @@
 0001001,Rock,common,Main_Rock.png
 0001002,Angry Rock,common,Angry_Rock.png
+0001004,Rock,common,Main_Rock.png
+0001003,Angry Rock,common,Angry_Rock.png
+0001006,Rock,common,Main_Rock.png
+0001005,Angry Rock,common,Angry_Rock.png
